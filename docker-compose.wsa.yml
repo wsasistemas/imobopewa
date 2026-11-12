@@ -21,6 +21,8 @@ services:
       - ./data:/app/data
     environment:
       - TZ=America/Sao_Paulo
+      # Ao reiniciar (PC ligado de novo, container reiniciado), reconecta sozinha a sessão wsa-admin.
+      - AUTO_START_SESSIONS=true
 
   tunel:
     image: cloudflare/cloudflared:2026.10.7
