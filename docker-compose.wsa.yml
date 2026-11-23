@@ -25,7 +25,7 @@ services:
       - AUTO_START_SESSIONS=true
 
   tunel:
-    image: cloudflare/cloudflared:2026.10.7
+    image: cloudflare/cloudflared:2026.11.1
     container_name: openwa-tunel
     restart: unless-stopped
     command: tunnel --no-autoupdate --url http://openwa-api:2785
